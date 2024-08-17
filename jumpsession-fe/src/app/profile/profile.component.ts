@@ -21,6 +21,6 @@ export class ProfileComponent {
   }
   cancelClick(): void {
     this.navService.showNav = false;
-    this.router.navigateByUrl('/user')
+    this.router.navigateByUrl('/users');
   };
 }
