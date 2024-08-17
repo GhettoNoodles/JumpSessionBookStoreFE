@@ -27,7 +27,7 @@ import { CreateBookModalComponent } from './create-book-modal/create-book-modal.
     BookAlocationModalComponent,
     CreateUserModalComponent,
     ConfirmAssignComponent,
-    ProfileComponent
+    ProfileComponent,
     CreateBookModalComponent
   ],
   imports: [
