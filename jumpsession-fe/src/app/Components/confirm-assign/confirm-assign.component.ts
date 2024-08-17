@@ -43,4 +43,7 @@ export class ConfirmAssignComponent {
   goBackToAssign() {
     this.hideConfirmComp.emit(false);
   }
+  goBack() {
+    history.back();
+  }
 }
