@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { Book } from '../Models/book';
-
+import { CheckOut } from '../Models/checkOut';
 
 @Injectable({
   providedIn: 'root'
@@ -41,4 +41,9 @@ export class BooksService {
         })
       );
   }
+  
+  assignBooks(checkOut : CheckOut) : Observable<CheckOut> {
+    return this.httpClient.post<CheckOut>(`${this.apiUrl}/checkOut`, checkOut);
+  }
+
 }
