@@ -23,7 +23,7 @@ export class CreateBookModalComponent {
   saveBook() {
     this.bookService.createBook(this.book).subscribe(
       (createdBook: Book) => {
-        console.log('User created successfully:', createdBook);
+        console.log('Book created successfully:', createdBook);
         this.bookCreated.emit(createdBook); // Emit the userCreated event
         this.closeModal();
       },

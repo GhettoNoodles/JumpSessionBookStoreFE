@@ -53,7 +53,7 @@ export class BooksComponent {
     console.log('Create book modal closed');
   }
 
-  onBookCreated() {
+  onBookCreated(newBook : Book): void {
     // this.books.push(book);
     // this.filteredBooks = this.books;
   }
