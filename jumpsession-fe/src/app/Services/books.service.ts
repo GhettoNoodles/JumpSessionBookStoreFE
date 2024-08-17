@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { Book } from '../Models/book';
-
+import { CheckOut } from '../Models/checkOut';
 
 @Injectable({
   providedIn: 'root'
@@ -27,4 +27,23 @@ export class BooksService {
         })
       );
   }
+  createBook(book: Book): Observable<Book> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    
+    return this.httpClient.post<Book>(`${this.apiUrl}/create-book`, book, { headers })
+      .pipe(
+        map(response => {
+          return response;
+        }),
+        catchError(error => {
+          console.error('Error creating user:', error);
+          return throwError('Error creating user, please try again later.');
+        })
+      );
+  }
+  
+  assignBooks(checkOut : CheckOut) : Observable<CheckOut> {
+    return this.httpClient.post<CheckOut>(`${this.apiUrl}/checkOut`, checkOut);
+  }
+
 }

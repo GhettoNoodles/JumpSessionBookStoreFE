@@ -14,6 +14,7 @@ import { BookAlocationModalComponent } from './Components/Modals/book-alocation-
 import { CreateUserModalComponent } from './Components/Modals/create-user-modal/create-user-modal.component';
 import { ConfirmAssignComponent } from './Components/confirm-assign/confirm-assign.component';
 import { ProfileComponent } from './profile/profile.component';
+import { CreateBookModalComponent } from './create-book-modal/create-book-modal.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ProfileComponent } from './profile/profile.component';
     CreateUserModalComponent,
     ConfirmAssignComponent,
     ProfileComponent
+    CreateBookModalComponent
   ],
   imports: [
     BrowserModule,
