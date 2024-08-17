@@ -3,6 +3,9 @@
     <div class="card">
       <div class="card-body">
         <h2 class="card-title text-center mb-4">Books List</h2>
+        
+        <button type="button" class="btn btn-primary" (click)="openCreateBookModal()">Create</button>
+        
         <div class="form-group mb-2">
           <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchTerm" (input)="filterBooks()">
         </div>
@@ -33,3 +36,5 @@
       </div>
     </div>
   </div>
+  <app-create-book-modal *ngIf="isCreateBookModalVisible" (close)="closeCreateBookModal()">
+  </app-create-book-modal>
