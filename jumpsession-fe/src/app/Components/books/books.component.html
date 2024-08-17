@@ -36,5 +36,5 @@
       </div>
     </div>
   </div>
-  <app-create-book-modal *ngIf="isCreateBookModalVisible" (close)="closeCreateBookModal()">
+  <app-create-book-modal *ngIf="isCreateBookModalVisible" (close)="closeCreateBookModal()" (bookCreated)="onUserCreated($event)">
   </app-create-book-modal>

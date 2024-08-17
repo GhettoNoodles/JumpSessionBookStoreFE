@@ -20,18 +20,18 @@ export class CreateBookModalComponent {
 
   constructor(private bookService: BooksService) { }
 
-  // saveBook() {
-  //   this.bookService.createBook(this.book).subscribe(
-  //     (createdBook: Book) => {
-  //       console.log('User created successfully:', createdBook);
-  //       this.userCreated.emit(createdBook); // Emit the userCreated event
-  //       this.closeModal();
-  //     },
-  //     error => {
-  //       console.error('Error creating user:', error);
-  //     }
-  //   );
-  // }
+  saveBook() {
+    this.bookService.createBook(this.book).subscribe(
+      (createdBook: Book) => {
+        console.log('User created successfully:', createdBook);
+        this.bookCreated.emit(createdBook); // Emit the userCreated event
+        this.closeModal();
+      },
+      error => {
+        console.error('Error creating user:', error);
+      }
+    );
+  }
   closeModal() {
     this.close.emit();
   }
