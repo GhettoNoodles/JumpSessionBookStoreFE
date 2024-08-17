@@ -64,7 +64,7 @@ export class UsersComponent {
   onRowClick(profile: Profile): void {
     this.navService.showNav = false;
     this.navService.selectedProfile = profile;
-    this.router.navigateByUrl('/assign-to-user');
+    this.router.navigateByUrl('/Profile');
   }
 
   closeModal(): void {
