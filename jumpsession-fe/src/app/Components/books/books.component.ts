@@ -56,5 +56,6 @@ export class BooksComponent {
   onBookCreated(newBook : Book): void {
     // this.books.push(book);
     // this.filteredBooks = this.books;
+    this.bookService.createBook(newBook);
   }
 }
