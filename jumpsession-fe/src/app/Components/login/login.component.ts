@@ -9,8 +9,8 @@ import { NavService } from 'src/app/Shared-Services/nav.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  username: string = '';
-  password: string = '';
+  username: string = 'admin';
+  password: string = 'password';
   errorMessage: string = '';
 
   constructor(private loginService: LoginService, private router: Router, private navService: NavService) {

@@ -19,4 +19,8 @@ export class ProfileComponent {
   
     this.router.navigateByUrl('/assign-to-user');
   }
+  cancelClick(): void {
+    this.navService.showNav = false;
+    this.router.navigateByUrl('/user')
+  };
 }
