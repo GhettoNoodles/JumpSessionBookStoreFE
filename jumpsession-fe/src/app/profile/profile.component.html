@@ -5,11 +5,11 @@
         <h6>{{navService.selectedProfile?.email}}</h6>
         <h6>{{navService.selectedProfile?.phoneNumber}}</h6>
     </div>
-    <h2>Selected Books:</h2>
+    <h2>Assigned Books:</h2>
     <div id="selected-books">
     
         <div>
-            <button>Confirm</button>
+            <button  (click)="assignClick()">Assign</button>
             <button>Cancel</button>
         </div>
     </div>

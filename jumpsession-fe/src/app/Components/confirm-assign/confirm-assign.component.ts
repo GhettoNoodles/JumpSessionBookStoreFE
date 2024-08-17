@@ -21,12 +21,14 @@ export class ConfirmAssignComponent {
 
   assignBooks() {
     var newCheckouts: CheckOut[] = [];
+    var i =0;
     this.selectedBooks.forEach(book => {
       newCheckouts.push({
-        id: 0,
+        id: i,
         bookId: book.id,
         userId: this.navService.selectedProfile?.id as number
       });
+      i++;
     });
     
     const assignments = newCheckouts.map(checkout => this.profileService.assignBooks(checkout));
