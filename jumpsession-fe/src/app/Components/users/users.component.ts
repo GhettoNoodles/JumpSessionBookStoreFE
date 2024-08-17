@@ -62,9 +62,9 @@ export class UsersComponent {
   }
 
   onRowClick(profile: Profile): void {
-    this.navService.showNav = false;
-    this.navService.selectedProfile = profile;
-    this.router.navigateByUrl('/Profile');
+   // this.navService.showNav = false;
+    //this.navService.selectedProfile = profile;
+    this.router.navigateByUrl('/profile');
   }
 
   closeModal(): void {
