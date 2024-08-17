@@ -1,5 +1,5 @@
 export interface CheckOut {
-    id: number,
+    // id: number,
     userId: number,
     bookId: number
 }

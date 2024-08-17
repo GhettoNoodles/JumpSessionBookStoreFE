@@ -5,6 +5,7 @@ import { ProfileService } from 'src/app/Services/profile.service';
 import { CheckOut } from '../../Models/checkOut';
 import { NavService } from 'src/app/Shared-Services/nav.service';
 import { Router } from '@angular/router';
+import { AssignComponent } from '../assign/assign.component';
 
 @Component({
   selector: 'app-confirm-assign',
@@ -21,14 +22,13 @@ export class ConfirmAssignComponent {
 
   assignBooks() {
     var newCheckouts: CheckOut[] = [];
-    var i =0;
+
     this.selectedBooks.forEach(book => {
       newCheckouts.push({
-        id: i,
+        // id: 1,
         bookId: book.id,
         userId: this.navService.selectedProfile?.id as number
       });
-      i++;
     });
     
     const assignments = newCheckouts.map(checkout => this.profileService.assignBooks(checkout));

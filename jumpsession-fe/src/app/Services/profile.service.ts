@@ -12,6 +12,7 @@ import { CheckOut } from '../Models/checkOut';
 export class ProfileService {
 
   private apiUrl = 'http://localhost:8080/api/user';
+  private adminApiURL = 'http://localhost:8080/api/admin';
 
   constructor(private http: HttpClient) { }
 
@@ -45,6 +46,6 @@ export class ProfileService {
   }
 
   assignBooks(checkOut : CheckOut) : Observable<CheckOut> {
-    return this.http.post<CheckOut>(`${this.apiUrl}/checkOut`, checkOut);
+    return this.http.post<CheckOut>(`${this.adminApiURL}/checkOut`, checkOut);
   }
 }
